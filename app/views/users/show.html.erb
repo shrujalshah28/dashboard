@@ -7,7 +7,7 @@
       Email: <%= @user.email %>
     </div>
     <div class="user-action">
-      <% if logged_in? && current_user == @user %>
+      <% if logged_in? && (current_user == @user || current_user.admin?) %>
         <%= link_to "Edit user", edit_user_path(@user), class: "btn btn-md btn-primary" %>
         <%= link_to "Delete user", user_path(@user), method: :delete, data: { confirm: "Are you sure you want to delete this user?"}, class: "btn btn-md btn-danger" %>
       <% end %>

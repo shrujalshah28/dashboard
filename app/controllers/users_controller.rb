@@ -42,8 +42,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    if(@user.id == current_user.id)
+      session[:user_id] = nil
+    end
     @user.destroy
-    session[:user_id] = nil
     flash[:danger] = "User was successfully delected"
     redirect_to users_path
   end
@@ -58,7 +60,7 @@ class UsersController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @user
+    if current_user != @user and !current_user.admin?
       flash[:danger] = "You can only edit or delete your own profile"
       redirect_to root_path
     end
