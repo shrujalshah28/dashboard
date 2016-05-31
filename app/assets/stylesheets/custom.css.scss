@@ -40,29 +40,31 @@ $navbar-default-bg: black;
 	background-color: black;
 }
 
-.article-meta-details {
+.user-meta-details {
 	border-top: 1px solid #eaeaea;
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
-.article-action {
+.user-action {
 	border-top: 1px solid #eaeaea;
-	paddind-top: 5px;
+	padding-top: 10px;
 }
 
 .description {
 	margin-top: 0;
 }
 
-.article-title {
+.user-title {
 	font-weight: bold;
 	font-size: 1.5em;
 }
 
-.article-body {
+.user-body {
 	border-top: 1px solid #eaeaea;
-	paddind-top: 15px;
+	padding-top: 20px;
 	padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.7em;
 }
 
 .listing {
